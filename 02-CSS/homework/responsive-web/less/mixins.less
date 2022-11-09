@@ -1,1 +1,24 @@
 // Mixins acá
+.flex (@direction, @justify, @align) {
+    display: flex;
+    flex-direction: @direction;
+    justify-content: @justify;
+    align-items: @align;
+}
+
+.button(@bgColor, @color, @fontSize) {
+    background-color: @bgColor;
+    color: @color;
+    font-size: @fontSize;
+    border: 1px, solid, @fontSize;
+    border-radius: 5px;
+    text-align: center;
+
+    &:hover{//cuando se pasa el mouse por encima
+        background-color: @color;
+        color: @bgColor;
+        border: 1px, solid, @color;
+        cursor: pointer;//el sursor se pasa a manita
+    }
+    
+}

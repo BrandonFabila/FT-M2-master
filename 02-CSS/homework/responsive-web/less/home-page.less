@@ -3,6 +3,10 @@
 .home {
 
   .intro {
+    .header-img {
+      border-radius: 20px;
+      margin-top: 5px;
+    }
 
     h2 {
       padding: 15px;
@@ -58,6 +62,10 @@
       }
 
       .btn {
+        .button(@btn-bg-color, white, 15px);
+        height: 30px;
+        width: 80px;
+        .flex(row, center, center);
       }
     }
 
@@ -69,6 +77,31 @@
         width: 100%;
         height: auto;
         border-radius: 10px;
+      }
+    }
+  }
+
+  @media @phone {
+    .home {
+      .intro {
+        padding: 10px;
+        .header-img {
+          width: 100%;//asi la imagen no se desborda
+        }
+      }
+      .music-images {
+        .ondas, .tecnologia {//estas
+          display: none;//se borran
+        }
+        .audicular {
+          width: 100%;
+        }
+      }
+      .actual {
+        flex-direction: column-reverse;
+        .actual-img, .actual-text {
+          width: 100%;//ocupan el total
+        }
       }
     }
   }
